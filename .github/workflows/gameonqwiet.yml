@@ -33,7 +33,7 @@ jobs:
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
     - name: NextGen Static Analysis
-      run: QWIET_ENABLE_MULTI_LANGUAGE_ANALYSIS=true ${GITHUB_WORKSPACE}/sl analyze
+      #run: QWIET_ENABLE_MULTI_LANGUAGE_ANALYSIS=true ${GITHUB_WORKSPACE}/sl analyze
       run: ${GITHUB_WORKSPACE}/sl analyze
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
