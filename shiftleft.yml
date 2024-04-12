@@ -1,3 +1,8 @@
+version: 2 # implies that check-analysis v2 should be used and therefore
+           # the --v2 flag can be omitted when running sl check-analysis
+source:
+  branch: master
+  #scan: 1 # provide either branch or scan, not both
 build_rules:
   - id: "No critical or high SAST findings"
     finding_types:
