@@ -42,6 +42,7 @@ jobs:
         SHIFTLEFT_GRPC_API_HOST: api.shiftleft.io:443
   Build-Rules: 
     runs-on: ubuntu-latest
+    permissions: write-all
     needs: NextGen-Static-Analysis
     steps:
     - uses: actions/checkout@v3
