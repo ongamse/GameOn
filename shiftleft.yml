@@ -1,6 +1,14 @@
 version: 2 # implies that check-analysis v2 should be used and therefore
            # the --v2 flag can be omitted when running sl check-analysis
 build_rules:
+    - id: Allow zero high SAST vulnerabilities # is the build rule identifier
+    finding_types:
+      - vuln
+      - secret
+    severities:
+      - high
+      - critical
+    threshold: 0
   - id: Allow no critical findings
     severities:
       - critical
@@ -12,5 +20,6 @@ build_rules:
   - id: Allow no reachable OSS vulnerability
     finding_types:
       - oss_vuln
+      - container
     options:
       reachable: true
