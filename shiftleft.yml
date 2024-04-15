@@ -4,11 +4,11 @@ source:
   scan: 1
 build_rules:
 - id: Allow no critical findings
-    finding_types:
+  finding_types:
     - vuln
   severities:
     - critical
-threshold: 0
+  threshold: 0
   options:
    num_findings: 10 # Return 10 sast findings
 - id: Allow one OSS or container finding
