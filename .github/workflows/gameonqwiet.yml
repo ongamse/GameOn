@@ -34,7 +34,7 @@ jobs:
       id: extract_branch
     - name: NextGen Static Analysis
       #run: QWIET_ENABLE_MULTI_LANGUAGE_ANALYSIS=true ${GITHUB_WORKSPACE}/sl analyze
-      run: ${GITHUB_WORKSPACE}/sl analyze --wait --container sebastianrevuelta/chess-game:2.3
+      run: ${GITHUB_WORKSPACE}/sl analyze --wait --container sebastianrevuelta/chess-game:2.3 --javasrc
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
